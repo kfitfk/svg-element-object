@@ -1,0 +1,11 @@
+{
+  "name": "svg-element-object",
+  "version": "1.0.0",
+  "description": "Convert some SVG elements to JavaScript objects with frequently used attributes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ye Hao",
+  "license": "MIT"
+}
