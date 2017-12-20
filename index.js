@@ -107,16 +107,16 @@ function elementObject(element, attrs) {
       obj = textObject(element);
       break;
     case 'line':
-      obj = attributesFromElement(element, ['x1', 'y1', 'x2', 'y2', 'stroke-width']);
+      obj = attributesFromElement(element, ['x1', 'y1', 'x2', 'y2', 'stroke-width', 'transform']);
       break;
     case 'rect':
       obj = attributesFromElement(element, ['x', 'y', 'width', 'height', 'rx', 'ry', 'transform', 'stroke-width']);
       break;
     case 'polyline':
-      obj = attributesFromElement(element, ['points', 'stroke-width']);
+      obj = attributesFromElement(element, ['points', 'stroke-width', 'transform']);
       break;
     case 'polygon':
-      obj = attributesFromElement(element, ['points', 'stroke-width']);
+      obj = attributesFromElement(element, ['points', 'stroke-width', 'transform']);
       break;
     case 'circle':
       obj = attributesFromElement(element, ['cx', 'cy', 'r', 'transform', 'stroke-width']);
