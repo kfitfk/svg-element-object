@@ -72,7 +72,12 @@ function textObject(textEl) {
   attributes = attributesFromElement(textEl, ['transform']);
   attributes.children = [];
   Array.prototype.forEach.call(children, function(childEl) {
-    if (!isSVGEl) childEl = textEl.constructor(childEl);
+    /**
+     * Calling textEl.constructor(childEl) will modify textEl to childEl
+     * using cheerio. So I assign textEl.constructor to a variable first
+     */
+    var constructor = textEl.constructor;
+    if (!isSVGEl) childEl = constructor(childEl);
     if (type(childEl) !== 'tspan') return;
     var obj = attributesFromElement(childEl, ['x', 'y', 'font-size', 'letter-spacing']);
     obj.text = isSVGEl ? childEl.textContent : childEl.text();
